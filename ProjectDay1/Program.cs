@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Threading.Channels;
 
 namespace ProjectDay1
 {
@@ -16,11 +17,14 @@ namespace ProjectDay1
             Console.WriteLine("calling get details \n");
             String s = a.GetDetails();
             Console.WriteLine(s);
+            Console.Write("Enter Amount To Be Withdrawn : ");
+            double amount = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("calling withdraw \n");
-            a.WithDraw(200);
+            a.WithDraw(amount);
             Console.WriteLine("calling get deatils \n");
             String s2 = a.GetDetails();
-            Console.WriteLine(s2);     
+            Console.WriteLine(s2);  
+            //hello
         }
     }
 }
